@@ -12,6 +12,20 @@
  */
 export function echo(word, n) {
   // TODO
+  let result = "";
+  let i = 0;
+
+  while (i < n) {
+    result += word;
+
+    if (i < n - 1) {
+      result += " ";
+    }
+
+    i += 1;
+  }
+
+  return result;
 }
 
 /**
@@ -28,6 +42,20 @@ export function echo(word, n) {
  */
 export function echoWithSpace(word, n) {
   // TODO
+  let result = "";
+  let i = 0;
+
+  while (i < n) {
+    result += word;
+
+    if (i < n - 1) {
+      result += " ";
+    }
+
+    i += 1;
+  }
+
+  return result;
 }
 
 /**
@@ -43,6 +71,15 @@ export function echoWithSpace(word, n) {
  */
 export function sumTo(n) {
   // TODO
+  let sum = 0;
+  let i = 1;
+
+  while (i <= n) {
+    sum += i;
+    i += 1;
+  }
+
+  return sum;
 }
 
 /**
@@ -59,6 +96,15 @@ export function sumTo(n) {
  */
 export function sumFromTo(a, z) {
   // TODO
+  let sum = 0;
+  let i = a;
+
+  while (i <= z) {
+    sum += i;
+    i += 1;
+  }
+
+  return sum;
 }
 
 /**
@@ -74,6 +120,10 @@ export function sumFromTo(a, z) {
  */
 export function countdown(n) {
   // TODO
+  while (n >= 1) {
+    console.log(n);
+    n -= 1;
+  }
 }
 
 /**
@@ -89,6 +139,18 @@ export function countdown(n) {
  */
 export function sumOddsToN(n) {
   // TODO
+  let sum = 0;
+  let i = 1;
+
+  while (i <= n) {
+    if (i % 2 !== 0) {
+      sum += i;
+    }
+
+    i += 1;
+  }
+
+  return sum;
 }
 
 /**
@@ -109,6 +171,18 @@ export function sumOddsToN(n) {
  */
 export function getGrowthTime(start, target) {
   // TODO
+  if (start <= 0) {
+    return undefined;
+  }
+
+  let minutes = 0;
+
+  while (start < target) {
+    start *= 2;
+    minutes += 20;
+  }
+
+  return minutes;
 }
 
 /**
@@ -129,6 +203,18 @@ export function getGrowthTime(start, target) {
  */
 export function getCompoundTime(start, rate, target) {
   // TODO
+  if (start <= 0 || rate <= 0) {
+    return undefined;
+  }
+
+  let years = 0;
+
+  while (start < target) {
+    start += start * rate;
+    years += 1;
+  }
+
+  return years;
 }
 
 /**
@@ -155,6 +241,19 @@ export function getCompoundTime(start, rate, target) {
  */
 export function moveWater(colander, bucket) {
   // TODO
+  let water = 0;
+  let trips = 0;
+
+  while (water < bucket) {
+    water += colander;
+    trips += 1;
+
+    if (colander > 1) {
+      colander -= 1;
+    }
+  }
+
+  return trips;
 }
 
 /**
